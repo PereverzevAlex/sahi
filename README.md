@@ -28,6 +28,21 @@
 </div>
 </div>
 
+
+## <div align="center">How to install</div>
+1. Navigate to the root directory of the sahi repository clone on your machine where the setup.py file is located.
+```
+cd ~/sahi/
+```
+2. Use the following command to install your local version of sahi:
+```
+pip install -e .
+```
+In case of error try to update pip
+```
+pip install --upgrade pip
+```
+
 ## <div align="center">Overview</div>
 
 Object detection and instance segmentation are by far the most important applications in Computer Vision. However, the detection of small objects and inference on large images still need to be improved in practical usage. Here comes the SAHI to help developers overcome these real-world problems with many vision utilities.
@@ -222,92 +237,3 @@ If you use this package in your work, please cite it as:
   url          = {https://doi.org/10.5281/zenodo.5718950}
 }
 ```
-
-## <div align="center">Contributing</div>
-
-`sahi` library currently supports all [YOLOv5 models](https://github.com/ultralytics/yolov5/releases), [MMDetection models](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/model_zoo.md), [Detectron2 models](https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md), and [HuggingFace object detection models](https://huggingface.co/models?pipeline_tag=object-detection&sort=downloads). Moreover, it is easy to add new frameworks.
-
-All you need to do is, create a new .py file under [sahi/models/](https://github.com/obss/sahi/tree/main/sahi/models) folder and create a new class in that .py file that implements [DetectionModel class](https://github.com/obss/sahi/blob/7e48bdb6afda26f977b763abdd7d8c9c170636bd/sahi/models/base.py#L12). You can take the [MMDetection wrapper](https://github.com/obss/sahi/blob/7e48bdb6afda26f977b763abdd7d8c9c170636bd/sahi/models/mmdet.py#L18) or [YOLOv5 wrapper](https://github.com/obss/sahi/blob/7e48bdb6afda26f977b763abdd7d8c9c170636bd/sahi/models/yolov5.py#L17) as a reference.
-
-Before opening a PR:
-
-- Install required development packages:
-
-```bash
-pip install -e ."[dev]"
-```
-
-- Reformat with black and isort:
-
-```bash
-python -m scripts.run_code_style format
-```
-
-## <div align="center">Contributors</div>
-
-<div align="center">
-
-<a align="left" href="https://github.com/fcakyon" target="_blank">Fatih Cagatay Akyon</a>
-
-<a align="left" href="https://github.com/sinanonur" target="_blank">Sinan Onur Altinuc</a>
-
-<a align="left" href="https://github.com/devrimcavusoglu" target="_blank">Devrim Cavusoglu</a>
-
-<a align="left" href="https://github.com/cemilcengiz" target="_blank">Cemil Cengiz</a>
-
-<a align="left" href="https://github.com/oulcan" target="_blank">Ogulcan Eryuksel</a>
-
-<a align="left" href="https://github.com/kadirnar" target="_blank">Kadir Nar</a>
-
-<a align="left" href="https://github.com/madenburak" target="_blank">Burak Maden</a>
-
-<a align="left" href="https://github.com/PushpakBhoge" target="_blank">Pushpak Bhoge</a>
-
-<a align="left" href="https://github.com/mcvarer" target="_blank">M. Can V.</a>
-
-<a align="left" href="https://github.com/ChristofferEdlund" target="_blank">Christoffer Edlund</a>
-
-<a align="left" href="https://github.com/ishworii" target="_blank">Ishwor</a>
-
-<a align="left" href="https://github.com/mecevit" target="_blank">Mehmet Ecevit</a>
-
-<a align="left" href="https://github.com/ssahinnkadir" target="_blank">Kadir Sahin</a>
-
-<a align="left" href="https://github.com/weypro" target="_blank">Wey</a>
-
-<a align="left" href="https://github.com/youngjae-avikus" target="_blank">Youngjae</a>
-
-<a align="left" href="https://github.com/tureckova" target="_blank">Alzbeta Tureckova</a>
-
-<a align="left" href="https://github.com/s-aiueo32" target="_blank">So Uchida</a>
-
-<a align="left" href="https://github.com/developer0hye" target="_blank">Yonghye Kwon</a>
-
-<a align="left" href="https://github.com/aphilas" target="_blank">Neville</a>
-
-<a align="left" href="https://github.com/mayrajeo" target="_blank">Janne Mäyrä</a>
-
-<a align="left" href="https://github.com/christofferedlund" target="_blank">Christoffer Edlund</a>
-
-<a align="left" href="https://github.com/ilkermanap" target="_blank">Ilker Manap</a>
-
-<a align="left" href="https://github.com/nguyenthean" target="_blank">Nguyễn Thế An</a>
-
-<a align="left" href="https://github.com/weiji14" target="_blank">Wei Ji</a>
-
-<a align="left" href="https://github.com/aynursusuz" target="_blank">Aynur Susuz</a>
-
-<a align="left" href="https://github.com/pranavdurai10" target="_blank">Pranav Durai</a>
-
-<a align="left" href="https://github.com/lakshaymehra" target="_blank">Lakshay Mehra</a>
-
-<a align="left" href="https://github.com/karl-joan" target="_blank">Karl-Joan Alesma</a>
-
-<a align="left" href="https://github.com/jacobmarks" target="_blank">Jacob Marks</a>
-
-<a align="left" href="https://github.com/williamlung" target="_blank">William Lung</a>
-
-<a align="left" href="https://github.com/amoghdhaliwal" target="_blank">Amogh Dhaliwal</a>
-
-</div>
-
