@@ -1,4 +1,4 @@
-from ultralytics import YOLO
+from ultralytics import YOLOv10
 from sahi import AutoDetectionModel
 from sahi.utils.cv import read_image_as_pil
 from sahi.predict import get_sliced_prediction
@@ -10,7 +10,7 @@ def check_image(img_path, model_path_dir, device_to_run, slice_width, slice_heig
     start_time = time.time()
 
     detection_model = AutoDetectionModel.from_pretrained(
-        model_type='openvino',
+        model_type='yolov10',
         model_path=model_path_dir,
         confidence_threshold=0.0,
         device=device_to_run,  # or 'cuda:0'
@@ -33,11 +33,11 @@ def check_image(img_path, model_path_dir, device_to_run, slice_width, slice_heig
     print(f"Total processing time: {total_time:.2f} seconds")
 
     # uncomment this to save predicted image
-    # results.export_visuals(export_dir=export_dir_path, file_name=image_name)
+    export_dir_path = '../../ai-detection-tools/builds/yolo10_test_image_bbox/'
+    results.export_visuals(export_dir=export_dir_path, file_name=image_name)
 
-
-img_path = './builds/test_images/1.png'
-model_path_dir = './builds/full/last_6_openvino_model/'
+img_path = '../../ai-detection-tools/builds/test_images/1.png'
+model_path_dir = '../../ai-detection-tools/builds/yolo10_models/1_last.pt'
 device_to_run = 'cpu' # or 'cuda:0'
 
 check_image(img_path, model_path_dir, device_to_run, 250, 250)

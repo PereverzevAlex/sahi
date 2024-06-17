@@ -14,6 +14,7 @@ MODEL_TYPE_TO_MODEL_CLASS_NAME = {
     "yolonas": "YoloNasDetectionModel",
     "yolov8onnx": "Yolov8OnnxDetectionModel",
     "openvino": "OpenVinoDetectionModel",
+    "yolov10": "Yolov10DetectionModel",
 }
 
 
