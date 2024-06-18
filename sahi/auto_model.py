@@ -17,7 +17,6 @@ MODEL_TYPE_TO_MODEL_CLASS_NAME = {
     "yolov10": "Yolov10DetectionModel",
 }
 
-
 class AutoDetectionModel:
     @staticmethod
     def from_pretrained(
